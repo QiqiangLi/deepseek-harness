@@ -38,6 +38,8 @@ Any row it prints can be replaced by a patch of your own.
 
 Composition mechanics are in [app-boot](../packages/boot/app-boot/README.md#profiles); config fields are in the generated [config catalog](config-catalog.md).
 
+Host integrations that need explicit execution placement use the [worker roles and warm pools](worker-roles.md) reference. The Chinese counterpart is [worker 角色与预热池](worker-roles.zh.md).
+
 ## Application launch
 
 Supported Node applications launch through named `dsh` profiles. The shipped profiles are `web`, `headless`, `sdk`, `sdk-minimal`, and `acp`, selected with `dsh --profile <name>` or `dsh <name>`. `plugin` names the management command; a profile with that name requires `--profile plugin`. The TypeScript SDK resolves its same-version `dsh` dependency and selects `sdk`; custom plugin composition remains a profile plus ordered patch files, not another executable or inline application tree. `sdk-minimal` is a repository-owned standalone bundle behind the same launcher, not a caller-supplied Cordis tree.
